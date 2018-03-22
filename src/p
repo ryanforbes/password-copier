@@ -1,0 +1,15 @@
+#!/bin/bash
+
+s=`grep -i -A1 "^$1$" ~/creds | tail -1 | tr -d '\n'`
+# echo "|$s|"
+if [ $s ]
+then 
+  echo "👍"
+  echo -n "$s" | pbcopy
+else 
+  echo "👎"
+fi
+
+
+
+
